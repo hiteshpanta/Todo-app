@@ -123,65 +123,8 @@
 
 
 
-<html lang="e
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <input type="text" name="task" id="taskTitle" />
 
-    <input type="date" name="taskDate" id="taskDate" />
-
-    <input type="button" value="Add" onclick="addTodo()" />
-     <input type="button" value="Delete All" onclick="deleteAll()" />
-
-    <br />
-    <hr />
-    <div id="contentDiv"></div>
-  </body>
-
-  <script>
-    function renderTodo(){
-    const data = JSON.parse(localStorage.getItem("data"));
-    // document.getElementById("content").innerHTML = `${data.title}
-    // <br/>
-    // ${data.date}`;
-
-    
-    if(data && data.length>0){
-    //     for(let i =0; i<data.length; i++){
-    // document.getElementById("content").innerHTML +=
-    // `<br/>${data[i].title}<br/>${data[i].date}`;
-    // }
-    // for(const obj of data)
-
-    for(let i=0; i<data.length; i++){
-            contentDiv.innerHTML += 
-            `<br/>${data[i].title}<br/>${data[i].date}<br/>
-            <input type="button" value="Delete" onclick="delOne(${i})" /><hr/>`;
-        }
-    }else{
-        document.getElementById("contentDiv").innerHTML = "";
-    }
-
-    
-    }
-    renderTodo()
-   
-    function delOne(index){
-        for(obj of data){
-            let ind = localStorage.getElementById("data");
-            localStorage.setItem("data");
-        }
-        localStorage.removeItem(index[i]);
-    }
-    
-
-    function deleteAll(){
-        localStorage.removeItem("data")
-        renderTodo();
-    }
+        
 
     function addTodo() {
       const taskTitle = document.getElementById("taskTitle").value;
